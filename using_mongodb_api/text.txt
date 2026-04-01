@@ -1,0 +1,9 @@
+REST API 
+
+GET => /api/users  all the users are sent  DONE
+GET => /api/users/:id  give the data of user with particular id   DONE
+
+POST => /api/users Create a new user   DONE
+PATCH => /api/users/:id Edit the user with particular id
+
+DELETE => /api/users/:id Delete the user with that particular id
