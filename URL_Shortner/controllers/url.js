@@ -8,9 +8,15 @@ async function handlegenerateNewShortURl(req,res) {
         shortID: shortID,
         redirectURL: body.url,
         visitHistory: [],
+        createdby: req.user._id
     })
 
-    return res.json({id: shortID});
+    // Render home view instead of returning JSON
+    const allUrls = await URL.find({});
+    return res.render("home", {
+        id: shortID,
+        urls: allUrls,
+    });
 }
 
 async function handlegetanalytics(req,res){
