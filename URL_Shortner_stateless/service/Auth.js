@@ -4,7 +4,8 @@ const secret = 'sumedh@%^2'
 function setUser(user){
     const payload = {
         name:user.name,
-        email : user.email
+        email : user.email,
+        role: user.role
     }
     return jwt.sign(payload,secret, { expiresIn: '1h' })
 }
